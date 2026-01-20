@@ -166,7 +166,7 @@
 			"Name": "MelonToken",
 			"Value": "{{Melon Sprite}}",
 			"When": {
-				"Melon Sprite": "BCAF",
+				"Melon Sprite": "BCAF, BCAF-Green",
 				"HasMod": "cometkins.BetterCropsAndForaging"
 			}
 		},
@@ -333,11 +333,35 @@
 	],
 	"Changes": [
 //LOADS
-	//Load giant crop assets
+	//Load cauliflower
         {
             "Action": "Load",
-            "Target": "KaileyStardew.SmallerGiantCrops/Cauliflower_{{CauliflowerToken}}_{{Cauliflower Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Melon_{{MelonToken}}_{{Melon Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Pumpkin_{{PumpkinToken}}_{{Pumpkin Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Powdermelon_{{PowdermelonToken}}_{{Powdermelon Colour Scheme}}, KaileyStardew.SmallerGiantCrops/QiFruit_{{QiFruitToken}}_{{Qi Fruit Colour Scheme}}",
-            "FromFile": "assets/{{TargetWithoutPath}}.png"
+            "Target": "KaileyStardew.SmallerGiantCrops/Cauliflower_SmallerGiantCrops",
+            "FromFile": "assets/Cauliflower_{{CauliflowerToken}}_{{Cauliflower Colour Scheme}}.png"
+        },
+	//Load melon
+        {
+            "Action": "Load",
+            "Target": "KaileyStardew.SmallerGiantCrops/Melon_SmallerGiantCrops",
+            "FromFile": "assets/Melon_{{MelonToken}}_{{Melon Colour Scheme}}.png"
+        },
+	//Load pumpkin
+        {
+            "Action": "Load",
+            "Target": "KaileyStardew.SmallerGiantCrops/Pumpkin_SmallerGiantCrops",
+            "FromFile": "assets/Pumpkin_{{PumpkinToken}}_{{Pumpkin Colour Scheme}}.png"
+        },
+	//Load powdermelon
+        {
+            "Action": "Load",
+            "Target": "KaileyStardew.SmallerGiantCrops/Powdermelon_SmallerGiantCrops",
+            "FromFile": "assets/Powdermelon_{{PowdermelonToken}}_{{Powdermelon Colour Scheme}}.png"
+        },
+	//Load qi fruit
+        {
+            "Action": "Load",
+            "Target": "KaileyStardew.SmallerGiantCrops/QiFruit_SmallerGiantCrops",
+            "FromFile": "assets/QiFruit_{{QiFruitToken}}_{{Qi Fruit Colour Scheme}}.png"
         },
 //EDIT DATA
 	//Cauliflower
@@ -360,7 +384,7 @@
                             "MaxStack":15
                         }
                     ],
-                    "Texture":"KaileyStardew.SmallerGiantCrops/Cauliflower_{{CauliflowerToken}}_{{Cauliflower Colour Scheme}}",
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Cauliflower_SmallerGiantCrops",
                     "TileSize":{
                         "X":2,
                         "Y":2
@@ -388,7 +412,7 @@
                             "MaxStack":15
                         }
                     ],
-                    "Texture":"KaileyStardew.SmallerGiantCrops/Melon_{{MelonToken}}_{{Melon Colour Scheme}}",
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Melon_SmallerGiantCrops",
                     "TileSize":{
                         "X":2,
                         "Y":2
@@ -416,7 +440,7 @@
                             "MaxStack":15
                         }
                     ],
-                    "Texture":"KaileyStardew.SmallerGiantCrops/Pumpkin_{{PumpkinToken}}_{{Pumpkin Colour Scheme}}",
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Pumpkin_SmallerGiantCrops",
                     "TileSize":{
                         "X":2,
                         "Y":2
@@ -444,7 +468,7 @@
                             "MaxStack":15
                         }
                     ],
-                    "Texture":"KaileyStardew.SmallerGiantCrops/Powdermelon_{{PowdermelonToken}}_{{Powdermelon Colour Scheme}}",
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Powdermelon_SmallerGiantCrops",
                     "TileSize":{
                         "X":2,
                         "Y":2
@@ -472,7 +496,7 @@
                             "MaxStack":18
                         }
                     ],
-                    "Texture":"KaileyStardew.SmallerGiantCrops/QiFruit_{{QiFruitToken}}_{{Qi Fruit Colour Scheme}}",
+                    "Texture":"KaileyStardew.SmallerGiantCrops/QiFruit_SmallerGiantCrops",
                     "TileSize":{
                         "X":2,
                         "Y":2
