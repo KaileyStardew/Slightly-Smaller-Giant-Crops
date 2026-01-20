@@ -1,0 +1,11 @@
+{
+  "Name": "Slightly Smaller Giant Crops",
+  "Author": "KaileyStardew",
+  "Version": "1.0.0",
+  "Description": "Giant crops the size of slightly smaller crops.",
+  "UniqueID": "KaileyStardew.SmallerGiantCrops",
+  "UpdateKeys": [ "Nexus:???" ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+  }
+}

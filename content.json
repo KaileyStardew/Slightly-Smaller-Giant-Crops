@@ -1,0 +1,484 @@
+{
+    "Format": "2.9.0",
+	
+	"ConfigSchema": {
+		//Appearance Section
+		"Cauliflower Sprite": {
+			"AllowValues": "Default, 6480, BCAF",
+            "Default": "Default",
+			"Description": "If you select 6480 or BCAF and don't have the respective mod installed, the default sprite will be used.",
+			"Section": "Appearance"
+		},
+		"Cauliflower Colour Scheme": {
+			"AllowValues": "Vanilla, Desaturated",
+            "Default": "Vanilla",
+			"Description": "Make your cauliflower even paler. If your sprite selection is BCAF, this setting will do nothing.",
+			"Section": "Appearance"
+		},
+		"Melon Sprite": {
+			"AllowValues": "Default, Redrawn, Striped, 6480, BCAF, BCAF-Green",
+            "Default": "Default",
+			"Description": "If you select 6480 or BCAF and don't have the respective mod installed, the default sprite will be used.",
+			"Section": "Appearance"
+		},
+		"Melon Colour Scheme": {
+			"AllowValues": "Vanilla, Desaturated",
+            "Default": "Vanilla",
+			"Description": "A less vibrant pink. If your sprite selection is BCAF or BCAF Green, this setting will do nothing.",
+			"Section": "Appearance"
+		},
+		"Pumpkin Colour Scheme": {
+			"AllowValues": "Vanilla, Desaturated",
+            "Default": "Vanilla",
+			"Description": "Slightly less green pumpkin leaves. The pumpkin has no alternate sprite options.",
+			"Section": "Appearance"
+		},
+		"Powdermelon Sprite": {
+			"AllowValues": "Default, BCAF",
+            "Default": "Default",
+			"Description": "If you select BCAF and don't have BCAF installed, the default sprite will be used.",
+			"Section": "Appearance"
+		},
+		"Powdermelon Colour Scheme": {
+			"AllowValues": "Vanilla, Desaturated",
+            "Default": "Vanilla",
+			"Description": "A softer blue. If your sprite selection is BCAF, this setting will do nothing.",
+			"Section": "Appearance"
+		},
+		"Qi Fruit Sprite": {
+			"AllowValues": "Default, Glasses, Plain, BCAF",
+            "Default": "Default",
+			"Description": "If you select BCAF and don't have BCAF installed, the default sprite will be used.",
+			"Section": "Appearance"
+		},
+		"Qi Fruit Colour Scheme": {
+			"AllowValues": "Vanilla, Desaturated",
+            "Default": "Vanilla",
+			"Description": "A softer blue. If your sprite selection is BCAF, this setting will do nothing.",
+			"Section": "Appearance"
+		},
+		//Behaviour Section
+        "Cauliflower Chance":{
+            "AllowValues":"low, normal, high, very high, false",
+            "Default":"normal",
+            "Section":"Behaviour"
+        },
+        "Melon Chance":{
+            "AllowValues":"low, normal, high, very high, false",
+            "Default":"normal",
+            "Section":"Behaviour"
+        },
+        "Pumpkin Chance":{
+            "AllowValues":"low, normal, high, very high, false",
+            "Default":"normal",
+            "Section":"Behaviour"
+        },
+        "Powdermelon Chance":{
+            "AllowValues":"low, normal, high, very high, false",
+            "Default":"normal",
+            "Section":"Behaviour"
+        },
+        "Qi Fruit Chance":{
+            "AllowValues":"low, normal, high, very high, false",
+            "Default":"normal",
+            "Section":"Behaviour"
+        },
+	},
+	"DynamicTokens": [
+//Cauli
+	//Default Sprite
+		{
+			"Name": "CauliflowerToken",
+			"Value": "Default",
+		},
+	//6480
+		{
+			"Name": "CauliflowerToken",
+			"Value": "{{Cauliflower Sprite}}",
+			"When": {
+				"Cauliflower Sprite": "6480",
+				"HasMod": "6480.giantcrops"
+			}
+		},
+	//BCAF
+		{
+			"Name": "CauliflowerToken",
+			"Value": "{{Cauliflower Sprite}}",
+			"When": {
+				"Cauliflower Sprite": "BCAF",
+				"HasMod": "cometkins.BetterCropsAndForaging"
+			}
+		},
+	//Normal Chance
+		{
+			"Name": "CauliflowerChance",
+			"Value": 0.01,
+		},
+	//Low Chance
+		{
+			"Name": "CauliflowerChance",
+			"Value": 0.005,
+			"When": {
+				"Cauliflower Chance": "low",
+			}
+		},
+	//High Chance
+		{
+			"Name": "CauliflowerChance",
+			"Value": 0.02,
+			"When": {
+				"Cauliflower Chance": "high",
+			}
+		},
+	//Very High Chance
+		{
+			"Name": "CauliflowerChance",
+			"Value": 0.05,
+			"When": {
+				"Cauliflower Chance": "very high",
+			}
+		},
+//Melon
+	//Default
+		{
+			"Name": "MelonToken",
+			"Value": "Default",
+		},
+	//Redrawn, Striped
+		{
+			"Name": "MelonToken",
+			"Value": "{{Melon Sprite}}",
+			"When": {
+				"Melon Sprite": "Default, Redrawn, Striped",
+			}
+		},
+	//6480
+		{
+			"Name": "MelonToken",
+			"Value": "{{Melon Sprite}}",
+			"When": {
+				"Melon Sprite": "6480",
+				"HasMod": "6480.giantcrops"
+			}
+		},
+	//BCAF
+		{
+			"Name": "MelonToken",
+			"Value": "{{Melon Sprite}}",
+			"When": {
+				"Melon Sprite": "BCAF",
+				"HasMod": "cometkins.BetterCropsAndForaging"
+			}
+		},
+	//Normal Chance
+		{
+			"Name": "MelonChance",
+			"Value": 0.01,
+		},
+	//Low Chance
+		{
+			"Name": "MelonChance",
+			"Value": 0.005,
+			"When": {
+				"Melon Chance": "low",
+			}
+		},
+	//High Chance
+		{
+			"Name": "MelonChance",
+			"Value": 0.02,
+			"When": {
+				"Melon Chance": "high",
+			}
+		},
+	//Very High Chance
+		{
+			"Name": "MelonChance",
+			"Value": 0.05,
+			"When": {
+				"Melon Chance": "very high",
+			}
+		},
+//No pumpkin alt sprite
+	//Default
+		{
+			"Name": "PumpkinToken",
+			"Value": "Default",
+		},
+	//Normal Chance
+		{
+			"Name": "PumpkinChance",
+			"Value": 0.01,
+		},
+	//Low Chance
+		{
+			"Name": "PumpkinChance",
+			"Value": 0.005,
+			"When": {
+				"Pumpkin Chance": "low",
+			}
+		},
+	//High Chance
+		{
+			"Name": "PumpkinChance",
+			"Value": 0.02,
+			"When": {
+				"Pumpkin Chance": "high",
+			}
+		},
+	//Very High Chance
+		{
+			"Name": "PumpkinChance",
+			"Value": 0.05,
+			"When": {
+				"Pumpkin Chance": "very high",
+			}
+		},
+//Powdermelon
+	//Default
+		{
+			"Name": "PowdermelonToken",
+			"Value": "Default",
+		},
+	//BCAF
+		{
+			"Name": "PowdermelonToken",
+			"Value": "{{Powdermelon Sprite}}",
+			"When": {
+				"Powdermelon Sprite": "BCAF",
+				"HasMod": "cometkins.BetterCropsAndForaging"
+			}
+		},
+	//Normal Chance
+		{
+			"Name": "PowdermelonChance",
+			"Value": 0.01,
+		},
+	//Low Chance
+		{
+			"Name": "PowdermelonChance",
+			"Value": 0.005,
+			"When": {
+				"Powdermelon Chance": "low",
+			}
+		},
+	//High Chance
+		{
+			"Name": "PowdermelonChance",
+			"Value": 0.02,
+			"When": {
+				"Powdermelon Chance": "high",
+			}
+		},
+	//Very High Chance
+		{
+			"Name": "PowdermelonChance",
+			"Value": 0.05,
+			"When": {
+				"Powdermelon Chance": "very high",
+			}
+		},
+//Qi Fruit
+	//Default
+		{
+			"Name": "QiFruitToken",
+			"Value": "Default",
+		},
+	//Glasses, Plain
+		{
+			"Name": "QiFruitToken",
+			"Value": "{{Qi Fruit Sprite}}",
+			"When": {
+				"Qi Fruit Sprite": "Default, Glasses, Plain",
+			}
+		},	
+	//BCAF
+		{
+			"Name": "QiFruitToken",
+			"Value": "{{Qi Fruit Sprite}}",
+			"When": {
+				"Qi Fruit Sprite": "BCAF",
+				"HasMod": "cometkins.BetterCropsAndForaging"
+			}
+		},
+	//Normal Chance
+		{
+			"Name": "QiFruitChance",
+			"Value": 0.01,
+		},
+	//Low Chance
+		{
+			"Name": "QiFruitChance",
+			"Value": 0.005,
+			"When": {
+				"Qi Fruit Chance": "low",
+			}
+		},
+	//High Chance
+		{
+			"Name": "QiFruitChance",
+			"Value": 0.02,
+			"When": {
+				"Qi Fruit Chance": "high",
+			}
+		},
+	//Very High Chance
+		{
+			"Name": "QiFruitChance",
+			"Value": 0.05,
+			"When": {
+				"Qi Fruit Chance": "very high",
+			}
+		},
+	],
+	"Changes": [
+//LOADS
+	//Load giant crop assets
+        {
+            "Action": "Load",
+            "Target": "KaileyStardew.SmallerGiantCrops/Cauliflower_{{CauliflowerToken}}_{{Cauliflower Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Melon_{{MelonToken}}_{{Melon Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Pumpkin_{{PumpkinToken}}_{{Pumpkin Colour Scheme}}, KaileyStardew.SmallerGiantCrops/Powdermelon_{{PowdermelonToken}}_{{Powdermelon Colour Scheme}}, KaileyStardew.SmallerGiantCrops/QiFruit_{{QiFruitToken}}_{{Qi Fruit Colour Scheme}}",
+            "FromFile": "assets/{{TargetWithoutPath}}.png"
+        },
+//EDIT DATA
+	//Cauliflower
+		{
+            "LogName":"Smaller Giant Crops-Cauliflower",
+            "Action":"EditData",
+            "Target":"Data/GiantCrops",
+			"When":{
+				"Cauliflower Chance": "low, normal, high, very high",
+			},
+            "Entries":{
+                "KaileyStardew.SmallerGiantCrops_Cauliflower":{
+                    "FromItemId":"(O)190",
+					"Health": 2,
+					"Chance": "{{CauliflowerChance}}",	
+                    "HarvestItems":[
+                        {
+                            "ItemId":"(O)190",
+                            "MinStack":10,
+                            "MaxStack":15
+                        }
+                    ],
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Cauliflower_{{CauliflowerToken}}_{{Cauliflower Colour Scheme}}",
+                    "TileSize":{
+                        "X":2,
+                        "Y":2
+                    },				
+                }
+			}
+		},
+	//Melon
+		{
+            "LogName":"Smaller Giant Crops-Melon",
+            "Action":"EditData",
+            "Target":"Data/GiantCrops",
+			"When":{
+				"Melon Chance": "low, normal, high, very high",
+			},
+            "Entries":{
+                "KaileyStardew.SmallerGiantCrops_Melon":{
+                    "FromItemId":"(O)254",
+					"Health": 2,
+					"Chance": "{{MelonChance}}",	
+                    "HarvestItems":[
+                        {
+                            "ItemId":"(O)254",
+                            "MinStack":10,
+                            "MaxStack":15
+                        }
+                    ],
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Melon_{{MelonToken}}_{{Melon Colour Scheme}}",
+                    "TileSize":{
+                        "X":2,
+                        "Y":2
+                    },				
+                }
+			}
+		},
+	//Pumpkin
+		{
+            "LogName":"Smaller Giant Crops-Pumpkin",
+            "Action":"EditData",
+            "Target":"Data/GiantCrops",
+			"When":{
+				"Pumpkin Chance": "low, normal, high, very high",
+			},
+            "Entries":{
+                "KaileyStardew.SmallerGiantCrops_Pumpkin":{
+                    "FromItemId":"(O)276",
+					"Health": 2,
+					"Chance": "{{PumpkinChance}}",	
+                    "HarvestItems":[
+                        {
+                            "ItemId":"(O)276",
+                            "MinStack":10,
+                            "MaxStack":15
+                        }
+                    ],
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Pumpkin_{{PumpkinToken}}_{{Pumpkin Colour Scheme}}",
+                    "TileSize":{
+                        "X":2,
+                        "Y":2
+                    },				
+                }
+			}
+		},
+	//Powdermelon
+		{
+            "LogName":"Smaller Giant Crops-Powdermelon",
+            "Action":"EditData",
+            "Target":"Data/GiantCrops",
+			"When":{
+				"Powdermelon Chance": "low, normal, high, very high",
+			},
+            "Entries":{
+                "KaileyStardew.SmallerGiantCrops_Powdermelon":{
+                    "FromItemId":"(O)Powdermelon",
+					"Health": 2,
+					"Chance": "{{PowdermelonChance}}",	
+                    "HarvestItems":[
+                        {
+                            "ItemId":"(O)Powdermelon",
+                            "MinStack":10,
+                            "MaxStack":15
+                        }
+                    ],
+                    "Texture":"KaileyStardew.SmallerGiantCrops/Powdermelon_{{PowdermelonToken}}_{{Powdermelon Colour Scheme}}",
+                    "TileSize":{
+                        "X":2,
+                        "Y":2
+                    },				
+                }
+			}
+		},
+	//QiFruit
+		{
+            "LogName":"Smaller Giant Crops-QiFruit",
+            "Action":"EditData",
+            "Target":"Data/GiantCrops",
+			"When":{
+				"Qi Fruit Chance": "low, normal, high, very high",
+			},
+            "Entries":{
+                "KaileyStardew.SmallerGiantCrops_QiFruit":{
+                    "FromItemId":"(O)889",
+					"Health": 2,
+					"Chance": "{{QiFruitChance}}",	
+                    "HarvestItems":[
+                        {
+                            "ItemId":"(O)889",
+                            "MinStack":14,
+                            "MaxStack":18
+                        }
+                    ],
+                    "Texture":"KaileyStardew.SmallerGiantCrops/QiFruit_{{QiFruitToken}}_{{Qi Fruit Colour Scheme}}",
+                    "TileSize":{
+                        "X":2,
+                        "Y":2
+                    },				
+                }
+			}
+		},
+	]
+}
